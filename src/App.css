@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes color-change-2x {
+  0% {
+    background: #19dcea;
+  }
+  100% {
+    background: #b22cff;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  15% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  15% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes tilt {
+  0% { filter: drop-shadow( 0px 0px 15px rgba(255,106,41,0.82)) drop-shadow(0px 0px 15px rgba(255,167,13,0.99));
+  }
+  33% { filter: drop-shadow( 0px 0px 20px rgba(255,106,41,0.82)) drop-shadow(0px 0px 20px rgba(255,167,13,0.99));
+  }
+  66% { filter: drop-shadow( 0px 0px 30px rgba(255,106,41,0.82)) drop-shadow(0px 0px 30px rgba(255,167,13,0.99));
+  }
+  100% { filter: drop-shadow( 0px 0px 40px rgba(255,106,41,0.82)) drop-shadow(0px 0px 40px rgba(255,167,13,0.99));
+  }
+}
+
+@keyframes moveCloud1 {
+  0% {   transform: translate(-50px, 0px); }
+  100% { transform: translate(350px, 0px); }
+}
+@keyframes moveCloud2 {
+  0% {   transform: translate(-300px, 0px); }
+  100% { transform: translate(0px, 0px); }
+}
+path.rectText{
+  /* background-color: red; */
+  animation: hideshow 2s linear infinite;
+  /* transform: translate(295px, 115px); */
+}
+path.cloud2{
+  animation: moveCloud2 7s linear infinite;
+}
+path.cloud1{
+  animation: moveCloud1 8s linear infinite;
+}
+ellipse.sun{
+  //animation: hideshow 2s linear infinite;
+  /* -webkit-box-shadow: 0px 0px 21px 12px rgba(255,106,41,0.82), 0px 0px 29px 34px rgba(255,167,13,0.99); */
+  /* filter: drop-shadow( 0px 0px 21px 12px rgba(255,106,41,0.82), 0px 0px 29px 34px rgba(255,167,13,0.99)); */
+  /* filter: drop-shadow( 0px 0px 10px rgba(255,106,41,0.82)) drop-shadow(0px 0px 10px rgba(255,167,13,0.99)); */
+  animation: tilt 2s alternate-reverse infinite;
+}
+.dibujo{
+  position: absolute;
+  z-index: -1;
+}
+.container {
+  /* animation: color-change-2x 2s linear infinite alternate both; */
+/* background-color: #19dcea; */
+  box-sizing: border-box;	
+
+  max-width:240px;
+  height:320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+  /* padding: 2rem; */
+  /* max-width: 400px; */
+  /* background-color: blue; */
 }
-
-.App-link {
-  color: #61dafb;
+.city {
+  align-self: center;
+  color: green;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
+.temp {
+  color: black;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+.state {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

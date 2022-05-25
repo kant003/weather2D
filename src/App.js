@@ -1,24 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import { ReactComponent as Svg } from "./texto.svg";
+import { ReactComponent as Svg2 } from "./campoNoche.svg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  return (<>
+    <div className="container">
+      <Svg2 className="dibujo"/>
+
+      <div className="city">Vancouver</div>
+      <div className="temp">18º</div>
+      <div className="state">Despejado</div>
     </div>
+  </>
   );
 }
 
