@@ -1,0 +1,146 @@
+*{
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+.container {
+    /* animation: color-change-2x 2s linear infinite alternate both; */
+    /* background-color: #19dcea; */
+   
+    max-width:240px;
+    /* box-sizing: border-box;
+    max-width:240px;
+    height:320px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap; */
+    
+    
+    /* padding: 2rem; */
+    /* max-width: 400px; */
+    /* background-color: blue; */
+
+  }
+  .infoContainer{
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 1rem;
+  }
+  .dibujo{
+    position: absolute;
+    z-index: -1;
+  }
+.locationName {
+    font-size: 2rem;
+    font-weight: bold;
+    color: blue;
+    margin-top: 0.5rem;
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    
+    text-align: center; */
+  }
+  .state {
+    align-self: center;
+    /* color: blue; */
+    /* font-size: 1.5rem; */
+    font-weight: bold;
+  }
+  .temperature {
+    /* align-self: center; */
+
+    color: blue;
+    font-size:3rem;
+    font-weight: bold;
+    /* margin-bottom: 3rem; */
+  }
+ 
+  .textInfo2{
+      color:blue;
+      background-color: rgba(255,255,255,0.5);
+      padding:5px;
+  }
+
+
+.extraData{
+    display:flex;
+    flex-direction:column;
+    align-self:start;
+    align-items: flex-start;
+}
+
+.forecast{
+    display:flex;
+}
+.forecast img{
+    width:40px;
+}
+
+.forecast-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+.time img{
+    width:30px;
+}
+
+.time-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.menu_list{
+    display:flex;
+    flex-direction:row;
+    padding:0;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgba(255,255,255,0.3);
+    border-radius:6px;
+}
+.menu_list>li{
+  list-style:none;
+}
+
+.menu_list>li>div{
+  text-decoration:none;
+  padding:2px;
+  font-family: 'Roboto', sans-serif;
+  /* font-size:1.1rem; */
+
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.menu_list>li>div:hover {
+  background-size: 100% 2px;
+  color:blue;
+}
+
+.menu_list>li>div {
+  color:blue;
+}
+
+.menu_list>li>div.active {
+  color:black;
+}
