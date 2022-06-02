@@ -6,10 +6,14 @@ Autor: Ángel González
 
 ![weatherapp](portada.png)
 
+# Deploy
+
+- Frontend: https://weather2d.up.railway.app/
+- Backend: https://weatheranimatedbackend.up.railway.app/
 
 # Tecnología usada
 
-- Frontend: React
+- Frontend: React https://github.com/kant003/weather2D
 - Backend: NodeJs https://github.com/kant003/weatherAnimatedBackend
 
 # Recursos
