@@ -1,26 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 import Weather from './components/Weather.js';
 import { createRef } from 'react';
 import WeatherController from './components/WeatherController';
 import mock from './components/mock'
+import useRapidApi from './hooks/useRapidApi';
 
 
 function App() {
-
   const svgRef = createRef()
+  const { jsonData, status, handleChangeLocation } = useRapidApi();
 
-  return (<>
-    <div className="title">WEATHER</div>
-    <WeatherController data={mock} svgRef={svgRef}></WeatherController>
-    <Weather data={mock} locationName={'Vigo'} 
-    temperature={20} 
-    condition={'Soleado'}  
-    precip={20} 
-    humidity={40} 
-    wind={15}
-    svgRef={svgRef}></Weather>
-  </>
+ 
+
+  if(jsonData === null) return <div className="principal-container">Loading...</div>
+
+  return (<div className="principal-container">
+    <div className="title">WEATHER APP</div>
+    {status && <p>{status}</p>}
+
+    <WeatherController jsonData={jsonData} svgRef={svgRef} changeLocation={handleChangeLocation}></WeatherController>
+    <Weather jsonData={jsonData} svgRef={svgRef}></Weather>
+  </div>
   );
 }
 

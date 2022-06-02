@@ -9,9 +9,7 @@ function Menu({menu=0, onClickMenu}) {
     <li onClick={() => onClickMenu(2)}>
         <div className={menu===2? 'active':''}>Fases</div>
     </li>
-    <li onClick={() => onClickMenu(3)}>
-        <div className={menu===3?'active':''}>menu4</div>
-    </li>
+   
 </ul>
 }
 

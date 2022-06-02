@@ -1,13 +1,11 @@
 function WheatherPhases({ astro }) {
-    return <div>
-        <div>Salida del sol: {astro.sunrise}</div>
-        <div>Puesta del sol: {astro.sunset}</div>
-
-        <div>Luna en fase: {astro.moon_phase}</div>
-        <div>Salida de la luna: {astro.moonrise}</div>
-        <div>Puesta de la luna: {astro.moonset}</div>
-        <div>Luminosidad luna: {astro.moon_illumination}</div>
-
+    return <div className="phases">
+        <div>Salida Sol: {astro.sunrise}</div>
+        <div>Puesta Sol: {astro.sunset}</div>
+        <br/>
+        <div>Luna en {astro.moon_phase}</div>
+        <div>Salida Luna: {astro.moonrise}</div>
+        <div>Puesta Luna: {astro.moonset}</div>
     </div>
 }
 

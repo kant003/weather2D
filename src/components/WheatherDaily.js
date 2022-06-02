@@ -1,14 +1,28 @@
-function WheatherDaily({hours}) {
-    const epochToHour = (epoch) => new Date(epoch*1000).getHours()
-    return <div> 
-        <div className="time">
-                {hours.filter(hour => epochToHour(hour.time_epoch) %2 === 0).map(hour => <div key={hour.time} className='time-element'>
-                        <div>{epochToHour(hour.time_epoch)}</div>
-                        <div><img src={hour.condition.icon} alt="time"/></div>
-                    </div>
+import { epochToHour } from "../utils/utils";
+
+function WheatherDaily({ hours }) {
+    return <div>
+
+        <div className="daily">
+            {hours
+                .filter(hour => epochToHour(hour.time_epoch) % 2 === 0)
+                .map(hour => <div key={hour.time} className='time-element'>
+                    <div>{epochToHour(hour.time_epoch) + ':00'}</div>
+                    <div><img src={hour.condition.icon} alt="time" /></div>
+                </div>
                 )}
-            </div>
-         </div>
+        </div>
+        <div className="daily">
+            {hours
+                .filter(hour => epochToHour(hour.time_epoch) % 2 === 1)
+                .map(hour => <div key={hour.time} className='time-element'>
+                    <div>{epochToHour(hour.time_epoch) + ':00'}</div>
+                    <div><img src={hour.condition.icon} alt="time" /></div>
+                </div>
+                )}
+        </div>
+
+    </div>
 }
 
 export default WheatherDaily;
