@@ -54,10 +54,10 @@
   color: blue;
 }
 
-@keyframes right-left {
-  0% { transform: translateX(0px);}
-  50% { transform: translateX(-500px);}
-  100% { transform: translateX(0px); }
+@keyframes bumping {
+  0% { transform: translateX(120px);}
+  /* 50% { transform: translateX(300px);} */
+  100% { transform: translateX(-480px); }
 }
 
 .summary {
@@ -67,7 +67,8 @@
 .daily {
   display: flex;
   flex-direction: row;
-  animation: right-left 9s ease normal infinite 1s both;
+  animation: bumping 4s linear 0s infinite alternate;
+
   padding-top: 0.5em;
 }
 .daily:hover {
