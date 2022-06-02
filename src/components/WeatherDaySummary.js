@@ -2,16 +2,14 @@ import { getRadiationUVText, getVisibilityText, getWindText } from "../utils/uti
 
 function WeatherDaySummary({ day }) {
 
-    return <div className="summary">
-        {/* <img src={day.condition.icon} alt={day.condition.text} /> */}
-        {/* <div className="extraData-text">{day.condition.text}</div> */}
-        <div className="textInfo">Temperatura media: {day.avgtemp_c}º</div>
-        <div className="textInfo">Precipitaciones: {day.totalprecip_mm} mm</div>
-        <div className="textInfo">Humedad: {day.avghumidity}%</div>
-        <div className="textInfo">Vel viento: {getWindText(day.maxwind_kph)}</div>
-        <div className="textInfo">Radiación: {getRadiationUVText(day.uv)}</div>
-        <div className="textInfo">Visibilidad: {getVisibilityText(day.avgvis_km)}</div>
-    </div>
+    return <ul className="summary">
+        <li className="textInfo">Temp media: {day.avgtemp_c}º</li>
+        <li className="textInfo">Precipit: {day.totalprecip_mm} mm</li>
+        <li className="textInfo">Humedad: {day.avghumidity}%</li>
+        <li className="textInfo">Vel viento: {getWindText(day.maxwind_kph)}</li>
+        <li className="textInfo">Radiación: {getRadiationUVText(day.uv)}</li>
+        <li className="textInfo">Visibilidad: {getVisibilityText(day.avgvis_km)}</li>
+    </ul>
 }
 
 export default WeatherDaySummary;

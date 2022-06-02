@@ -8,4 +8,3 @@ test('render content', () => {
     render(<WeatherDaySummary day={day}></WeatherDaySummary>);
     screen.getByText(/Temperatura media: 23º/);
 });
-   

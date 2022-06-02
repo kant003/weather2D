@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const SvgComponent = (props) => (
+const BackgroundSVG = (props) => (
   <svg ref={props.svg}
   
     viewBox="0 0 240 320"
@@ -5799,4 +5799,4 @@ const SvgComponent = (props) => (
   </svg>
 )
 
-export default SvgComponent
+export default BackgroundSVG

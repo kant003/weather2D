@@ -1,0 +1,125 @@
+@keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes disappear {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes right-left {
+    0% {
+      transform: translateX(-250px);
+    }
+    100% {
+      transform: translateX(250px);
+    }
+  }
+  
+  @keyframes down {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
+  @keyframes up {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  
+  @keyframes fluctuates {
+    0% {
+      filter: drop-shadow(0px 0px 15px rgba(255, 106, 41, 0.82))
+        drop-shadow(0px 0px 15px rgba(255, 167, 13, 0.99));
+    }
+    33% {
+      filter: drop-shadow(0px 0px 20px rgba(255, 106, 41, 0.82))
+        drop-shadow(0px 0px 20px rgba(255, 167, 13, 0.99));
+    }
+    66% {
+      filter: drop-shadow(0px 0px 30px rgba(255, 106, 41, 0.82))
+        drop-shadow(0px 0px 30px rgba(255, 167, 13, 0.99));
+    }
+    100% {
+      filter: drop-shadow(0px 0px 40px rgba(255, 106, 41, 0.82))
+        drop-shadow(0px 0px 40px rgba(255, 167, 13, 0.99));
+    }
+  }
+  
+  @keyframes twinkle {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
+  
+  .hideSun {
+    animation: disappear 2s linear normal forwards, down 2s linear normal forwards,
+      fluctuates 2s alternate-reverse infinite;
+  }
+  
+  .showSun {
+    animation: appear 2s linear normal forwards, up 2s linear normal forwards,
+      fluctuates 2s alternate-reverse infinite;
+  }
+  
+  .hideMoon {
+    animation: disappear 2s linear normal forwards, down 2s linear normal forwards;
+  }
+  
+  .showMoon {
+    animation: appear 2s linear normal forwards, up 2s linear normal forwards;
+  }
+  
+  .showStars {
+    animation: appear 2s linear normal forwards,
+      twinkle 1s alternate-reverse infinite;
+  }
+  .hideStars {
+    animation: disappear 2s linear normal forwards;
+  }
+  .showCloud {
+    animation: right-left 3s linear normal infinite both;
+    filter: none;
+  }
+  .showDarkCloud {
+    animation: right-left 3s linear normal infinite both;
+    filter: grayscale(100%) brightness(60%);
+    -webkit-filter: grayscale(100%) brightness(60%);
+    -moz-filter: grayscale(100%) brightness(60%);
+  }
+  .hideCloud {
+    animation: disappear 2s linear normal forwards;
+    filter: none;
+  }
+  .cloud {
+    background-color: red;
+  }
+  .show {
+    animation: appear 2s linear normal forwards;
+  }
+  .hide {
+    animation: disappear 2s linear normal forwards;
+  }
+  

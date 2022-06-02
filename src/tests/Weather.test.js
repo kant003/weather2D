@@ -12,7 +12,4 @@ test('render content', () => {
     screen.getByText(/Madrid/);
     screen.getByText(/Despejado/);
     screen.getByText(/18º/);
-   // screen.getByText(/description1/);
-   // screen.getByText(/no acepta colab/);
 });
-   

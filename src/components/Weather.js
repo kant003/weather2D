@@ -1,4 +1,4 @@
-import SvgComponent from './Field';
+import BackgroundSVG from './BackgroundSVG';
 import { useState } from 'react';
 import Menu from './Menu';
 import WheatherDaily from './WheatherDaily';
@@ -8,21 +8,19 @@ import WeatherListDays from './WeatherListDays';
 
 import '../styles/Weather.css';
 import '../styles/Menu.css';
+import '../styles/Svg.css';
 
 
 function Weather({ jsonData, svgRef }) {
     const [daySelected, setDaySelected] = useState(0);
     const [menuSelected, setMenuSelected] = useState(0);
-    const onClickChangeDaySelected = (m) => {
-        setDaySelected(m)
-        console.log('aaa',m)
-    }
-    const onClickChangeMenuSelected = (m) => {
-        setMenuSelected(m)
-        console.log('bbbb',m)
-    }
+
+    const onClickChangeDaySelected = (m) => setDaySelected(m)
+
+    const onClickChangeMenuSelected = (m) => setMenuSelected(m)
+
     return <div className="container">
-        <SvgComponent svg={svgRef} className="svg" />
+        <BackgroundSVG svg={svgRef} className="svg" />
         <div className="infoContainer">
             <WeatherListDays days={jsonData.forecast.forecastday} menu={daySelected} onClickMenu={onClickChangeDaySelected}></WeatherListDays>
             <div className="locationName">{jsonData.location.name}</div>

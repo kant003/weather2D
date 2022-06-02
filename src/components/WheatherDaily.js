@@ -5,7 +5,7 @@ function WheatherDaily({ hours }) {
 
         <div className="daily">
             {hours
-                .filter(hour => epochToHour(hour.time_epoch) % 2 === 0)
+                .filter(hour => epochToHour(hour.time_epoch) < 12)
                 .map(hour => <div key={hour.time} className='time-element'>
                     <div>{epochToHour(hour.time_epoch) + ':00'}</div>
                     <div><img src={hour.condition.icon} alt="time" /></div>
@@ -14,7 +14,7 @@ function WheatherDaily({ hours }) {
         </div>
         <div className="daily">
             {hours
-                .filter(hour => epochToHour(hour.time_epoch) % 2 === 1)
+                .filter(hour => epochToHour(hour.time_epoch) >= 12)
                 .map(hour => <div key={hour.time} className='time-element'>
                     <div>{epochToHour(hour.time_epoch) + ':00'}</div>
                     <div><img src={hour.condition.icon} alt="time" /></div>

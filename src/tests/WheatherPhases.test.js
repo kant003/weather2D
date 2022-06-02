@@ -6,7 +6,7 @@ import mock from '../components/mock'
 test('render content', () => {
     const astro = mock.forecast.forecastday[0].astro
     render(<WheatherPhases astro={astro}></WheatherPhases>);
-    screen.getByText(/Salida: 06:48 AM/);
-    screen.getByText(/Puesta: 09:39 PM/);
+    screen.getByText(/Salida Sol: 06:48 AM/);
+    screen.getByText(/Puesta Sol: 09:39 PM/);
 });
    
