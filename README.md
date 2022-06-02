@@ -1,6 +1,6 @@
 # Weather APP
 
-Aplicación web que muestra **animaciones en tiempo real** en funcion del tiempo meteorológico de la ciudad en la que te encuentras
+Aplicación web que muestra **animaciones en tiempo real** en función del tiempo meteorológico de la ciudad en la que te encuentras
 
 Autor: Ángel González
 
@@ -9,7 +9,7 @@ Autor: Ángel González
 
 # Tecnología usada
 
-- Frontend: React + svg + css animations
+- Frontend: React
 - Backend: NodeJs https://github.com/kant003/weatherAnimatedBackend
 
 # Recursos
